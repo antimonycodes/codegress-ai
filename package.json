@@ -1,0 +1,38 @@
+{
+  "name": "codegress",
+  "version": "1.0.0",
+  "description": "Your codebase, your to-do list — automatically. AI-powered, in code, zero-friction task management.",
+  "main": "dist/cli.js",
+  "bin": {
+    "codegress": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "postinstall": "codegress install"
+  },
+  "keywords": [
+    "cli",
+    "tasks",
+    "git",
+    "ai",
+    "productivity",
+    "typescript"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "inquirer": "^10.1.0",
+    "chalk": "^5.3.0",
+    "@google/generative-ai": "^0.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "typescript": "^5.6.3",
+    "ts-node": "^10.9.2"
+  },
+  "files": [
+    "dist/**/*",
+    "README.md"
+  ]
+}
