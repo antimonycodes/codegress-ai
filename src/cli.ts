@@ -10,21 +10,14 @@ program
   .command("install")
   .description("One-time setup: auto-init + AI + Git hook + badge")
   .action(async () => {
-    console.log("Codegress: Installing..."); // STEP 1
+    console.log("Codegress: Installing..."); 
 
-    console.log("Codegress: Running autoInitialize..."); // DEBUG
     await autoInitialize();
-    console.log("Codegress: autoInitialize DONE"); // DEBUG
 
-    console.log("Codegress: Installing Git hooks..."); // DEBUG
+    console.log("Codegress: Installing Git hooks..."); 
     await installGitHooks();
-    console.log("Codegress: Git hooks DONE"); // DEBUG
 
-    console.log("Codegress: Refreshing tasks & badge..."); // DEBUG
-    await updateAndRefresh();
-    console.log("Codegress: Refresh DONE"); // DEBUG
-
-    console.log("Codegress: Ready! Just code and commit.");
+    console.log("Codegress: Ready! Just code and commit. Open codegress-dashboard.html to view your dashboard.");
   });
 
 program.command("update-and-refresh").action(async () => {

@@ -1,20 +1,24 @@
 export interface Config {
-  projectVision: string;
   ignoredFolders: string[];
   autoAI: boolean;
 }
 
-export interface Task {
-  task: string;
-  done: boolean;
+export interface CommitActivity {
+  hash: string;
+  message: string;
+  date: string;
+  aiSummary?: string[];
 }
 
-export interface ModuleTasks {
-  tasks: Task[];
-  progress: number;
+export interface DailyActivity {
+  date: string; // YYYY-MM-DD
+  commitCount: number;
+  commits: CommitActivity[];
+  features: string[]; // AI generated features from commits
 }
 
-export interface TasksData {
-  modules: Record<string, ModuleTasks>;
-  overallProgress: number;
+export interface DashboardData {
+  projectName: string;
+  lastUpdated: string;
+  commits: CommitActivity[];
 }

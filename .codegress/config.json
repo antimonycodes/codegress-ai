@@ -1,0 +1,9 @@
+{
+  "ignoredFolders": [
+    "node_modules",
+    ".git",
+    "dist",
+    ".codegress"
+  ],
+  "autoAI": false
+}
